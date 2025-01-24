@@ -22,19 +22,19 @@ export class TwotierappStack extends Stack {
       createInternetGateway: true,
     });
 
-    const publicSubnet1 = new ec2.PublicSubnet(this, 'MyPublicSubnet1', {
-      availabilityZone: 'ca-central-1a',
-      cidrBlock: '10.30.1.0/24',
-      vpcId: customVpc.vpcId,
-      mapPublicIpOnLaunch: true,
-    });
+    // const publicSubnet1 = new ec2.PublicSubnet(this, 'MyPublicSubnet1', {
+    //   availabilityZone: 'ca-central-1a',
+    //   cidrBlock: '10.30.1.0/24',
+    //   vpcId: customVpc.vpcId,
+    //   mapPublicIpOnLaunch: true,
+    // });
 
-    const publicSubnet2 = new ec2.PublicSubnet(this, 'MyPublicSubnet2', {
-      availabilityZone: 'ca-central-1b',
-      cidrBlock: '10.30.2.0/24',
-      vpcId: customVpc.vpcId,
-      mapPublicIpOnLaunch: true,
-    });
+    // const publicSubnet2 = new ec2.PublicSubnet(this, 'MyPublicSubnet2', {
+    //   availabilityZone: 'ca-central-1b',
+    //   cidrBlock: '10.30.2.0/24',
+    //   vpcId: customVpc.vpcId,
+    //   mapPublicIpOnLaunch: true,
+    // });
 
     const ec2SecurityGroup = new ec2.SecurityGroup(this, 'EC2SecurityGroup', { 
       vpc: customVpc
